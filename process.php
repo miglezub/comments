@@ -17,6 +17,9 @@
         //add comment
         function addComment() {
             global $database;
+            $_POST['name'] = trim(strip_tags($_POST['name']));
+            $_POST['email'] = trim(strip_tags($_POST['email']));
+            $_POST['comment'] = trim(strip_tags($_POST['comment']));
             //validate submitted comment
             $errors = $this->validateComment($_POST['name'], $_POST['email'], $_POST['comment']);
             //validation successful
@@ -36,6 +39,9 @@
         //add subcomment
         function addSubcomment() {
             global $database;
+            $_POST['name'] = trim(strip_tags($_POST['name']));
+            $_POST['email'] = trim(strip_tags($_POST['email']));
+            $_POST['comment'] = trim(strip_tags($_POST['comment']));
             //validate submitted subcomment
             $errors = $this->validateComment($_POST['name'], $_POST['email'], $_POST['comment']);
             //validation successful
